@@ -13,14 +13,14 @@ if ! type "pip3" > /dev/null; then
   echo "pip3 is required. Installing pip3"
   sudo apt-get -y install python3-pip
   python3 get-pip.py --user
-  #prably you will face an error with old pip versions, the...
-  sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
+  #todo: probably you will face an error with old pip versions, the...
+  sudo python3 -m pip uninstall pip && sudo apt-get install python3-pip --reinstall
   echo "done."
 fi
  
 if ! type "git" > /dev/null ; then
   echo "git is required. Installing git..."
-  sudo apt-get install git
+  sudo apt-get -y install git
   echo "done."
 fi
  
