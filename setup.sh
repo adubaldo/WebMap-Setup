@@ -5,7 +5,7 @@
 # Description: Download, Install and run WebMap-Django-Projectt
  
 sudo apt-get update
-read -e -p "[?] Set custom installation dir [$WEBMAP_ROOT]:" -i "/opt" WEBMAP_ROOT
+read -e -p "[?] Set custom installation dir ['/opt']:" -i "/opt" WEBMAP_ROOT
 echo $WEBMAP_ROOT
  
 echo "[+] Check for requirements..."
@@ -30,13 +30,13 @@ echo "[+]installing django, pytz and xmltodict..."
 pip3 install django ; pip3 install pytz ; pip3 install xmltodict
  
 echo "[+] Installing wkhtmltopdf dependencies and binary files..."
-cd /opt || return
+cd /opt
 wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 tar xvf wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
  
 echo "[+] Cloning WebMap repo..."
  
-cd $WEBMAP_ROOT || return
+cd $WEBMAP_ROOT
 git clone https://github.com/Rev3rseSecurity/WebMap.git
 cd WebMap
 git checkout django-project
