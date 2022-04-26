@@ -37,7 +37,7 @@ tar xvf wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 echo "[+] Cloning WebMap repo..."
  
 cd $WEBMAP_ROOT
-git clone https://github.com/Rev3rseSecurity/WebMap.git
+git clone https://github.com/SabyasachiRana/WebMap.git
 cd WebMap
 git checkout django-project
 git submodule update --init
